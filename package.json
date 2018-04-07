@@ -1,0 +1,33 @@
+{
+  "name": "TestApp",
+  "version": "0.1.0",
+  "author": "Henri Hulski <henri.hulski@gazeta.pl",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel serve public/index.html --open",
+    "build": "parcel build -d build public/index.html",
+    "lint": "eslint \"src/**/*.js\"",
+    "format": "npm run lint -- --fix"
+  },
+  "dependencies": {
+    "@cerebral/react": "^3.2.1",
+    "@cerebral/router": "^3.2.1",
+    "cerebral": "^4.2.1",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-config-standard-jsx": "^5.0.0",
+    "eslint-plugin-import": "^2.10.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "parcel-bundler": "^1.7.0"
+  }
+}
