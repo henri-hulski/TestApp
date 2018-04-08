@@ -6,18 +6,18 @@ import NavBar from './NavBar'
 
 export default connect(
   {
-    isSmiling: state`isSmiling`,
+    mood: state`mood`,
     smileyClicked: signal`smileyClicked`,
   },
-  function Home({ isSmiling, smileyClicked }) {
+  function Home({ mood, smileyClicked }) {
     return (
       <div>
         <NavBar />
         <h2>TestApp</h2>
         <p>
-          How you feel today?&nbsp;&nbsp;
+          How you feel today?&nbsp;&nbsp;&nbsp;
           <button onClick={() => smileyClicked()}>
-            <strong>{isSmiling ? ' :-) ' : ' :-( '}</strong>
+            <strong>{` ${mood} `}</strong>
           </button>
         </p>
       </div>

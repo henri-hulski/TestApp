@@ -1,5 +1,5 @@
 import { state } from 'cerebral/tags'
-import { set, when } from 'cerebral/operators'
+import { set, when, equals } from 'cerebral/operators'
 import { redirectToSignal } from '@cerebral/router/operators'
 
 export const routeToHome = set(state`currentPage`, 'home')
@@ -19,10 +19,12 @@ export const toggleSmiley = [
   when(state`authenticated`),
   {
     true: [
-      when(state`isSmiling`),
+      equals(state`mood`),
       {
-        true: [set(state`isSmiling`, false)],
-        false: [set(state`isSmiling`, true)],
+        ':-)': set(state`mood`, ':-|'),
+        ':-|': set(state`mood`, ':-('),
+        ':-(': set(state`mood`, ';-)'),
+        ';-)': set(state`mood`, ':-)'),
       },
     ],
     false: redirectToSignal('loginRouted'),

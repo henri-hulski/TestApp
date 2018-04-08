@@ -21,7 +21,7 @@ export default Module({
   state: {
     currentPage: '',
     authenticated: false,
-    isSmiling: true,
+    mood: ':-)',
   },
   signals: {
     homeRouted: sequences.routeToHome,
