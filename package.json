@@ -4,8 +4,8 @@
   "author": "Henri Hulski <henri.hulski@gazeta.pl",
   "license": "MIT",
   "scripts": {
-    "start": "parcel serve public/index.html --open",
-    "build": "parcel build -d build public/index.html",
+    "start": "parcel serve public/index.html --no-cache --open",
+    "build": "parcel build -d build public/index.html --no-cache",
     "lint": "eslint \"src/**/*.js\"",
     "format": "npm run lint -- --fix"
   },
@@ -27,6 +27,7 @@
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-react": "^7.7.0",
     "eslint-plugin-standard": "^3.0.1",
     "parcel-bundler": "^1.7.0"
   }
